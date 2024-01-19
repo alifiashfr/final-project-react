@@ -1,23 +1,11 @@
-import { Center, Divider, Stack } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { rupiah } from "../utils/currencyConvert";
 import { storeOrderPlace } from "../Redux/ReduxSlices";
-import {
-  Table,
-  Button,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
-  TableContainer,
-  VStack,
-} from "@chakra-ui/react";
+import { Table, Button, Tr, Th, Td, useToast, VStack } from "@chakra-ui/react";
 
 export default function Bill() {
+  const toast = useToast();
   const dispatch = useDispatch();
   const getCartData = useSelector((state) => state.pizza.cartData);
   const getOrderData = useSelector((state) => state.pizza.orderPlace);
@@ -63,7 +51,15 @@ export default function Bill() {
         colorScheme="green"
         width="100%"
         mt={4}
-        onClick={() =>
+        onClick={() => {
+          toast({
+            title: "Order Success",
+            position: "top-right",
+            description: "Wait for a minute, we are preparing your pizza",
+            status: "success",
+            duration: 2000,
+            isClosable: true,
+          });
           dispatch(
             storeOrderPlace({
               cartData: [...getCartData],
@@ -71,11 +67,10 @@ export default function Bill() {
               service: service,
               totalPrice: totalPrice,
             })
-          )
-        }
+          );
+        }}
       >
         Place order
-        {console.log(getOrderData)}
       </Button>
     </VStack>
   ) : (

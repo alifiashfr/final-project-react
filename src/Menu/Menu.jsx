@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 export default function Menu() {
   const getSearchKeyword = useSelector((state) => state.pizza.searchKeyword);
+  
   const pizzaData = [
     {
       img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-ph.pizzahut.co.id/uploads/temp/sku-smoked-beef-topshot-final-1-1703057377215.png",

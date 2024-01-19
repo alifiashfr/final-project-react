@@ -26,7 +26,7 @@ export default function NavBar() {
 
         <HStack>
           <Button colorScheme="orange">
-            <ReactRouterLink style={{ color: "black" }} to="/history">
+            <ReactRouterLink style={{ color: "white" }} to="/history">
               Order History
             </ReactRouterLink>
           </Button>

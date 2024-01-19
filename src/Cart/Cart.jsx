@@ -7,9 +7,6 @@ import {
   Stack,
   Heading,
   StackDivider,
-  Text,
-  Center,
-  VStack,
 } from "@chakra-ui/react";
 import CartItem from "./CartItem";
 
@@ -19,10 +16,15 @@ export default function Cart() {
     <Card ml={4} width="100%" minWidth="16rem" minHeight="10rem">
       <center>
         <CardHeader>
-          <Heading size="100%">Cart</Heading>
+          <Heading size="100%" marginBottom="24px">
+            Cart
+          </Heading>
           {getCartData.length <= 0 ? (
             <div>
-              <img src="src/assets/bag.png" style={{ height: 200 }}></img>
+              <img
+                src="src/assets/bag.png"
+                style={{ height: 180, marginBottom: "24px" }}
+              ></img>
 
               <p>
                 Keranjang kamu masih kosong, yuk pilih pizzamu terlebih dahulu
@@ -31,16 +33,6 @@ export default function Cart() {
           ) : (
             <div></div>
           )}
-          {/* <div>
-            <img src="src/assets/NoItemsCart.png" style={{ height: 200 }}></img>
-
-            <p>
-              Keranjang kamu masih kosong, yuk pilih pizzamu terlebih dahulu
-            </p>
-          </div> */}
-          {/* <img src="src/assets/NoItemsCart.png" style={{ height: 200 }}></img>
-
-          <p>Keranjang kamu masih kosong, yuk pilih pizzamu terlebih dahulu</p> */}
         </CardHeader>
       </center>
       <CardBody maxWidth="25rem" minWidth="25rem">
@@ -52,28 +44,7 @@ export default function Cart() {
             ))
           ) : (
             <div></div>
-            // If cart is empty, render empty state message and image
-            // <VStack>
-            //   <Center>
-            //     <img src="src/assets/NoItemsCart.png" style={{ height: 200 }} />
-            //     <p>
-            //       Keranjang kamu masih kosong, yuk pilih pizzamu terlebih dahulu
-            //     </p>
-            //   </Center>
-            // </VStack>
           )}
-
-          {/* {getCartData.map((item, index) => (
-            <CartItem
-              key={index}
-              itemIndex={index}
-              item={item}
-              // itemName={item.pizzaName}
-              // itemQty={item.quantity}
-              // itemPrice={item.price}
-              // ItemNotes
-            ></CartItem>
-          ))} */}
         </Stack>
       </CardBody>
     </Card>
