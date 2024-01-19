@@ -8,7 +8,6 @@ export default function Bill() {
   const toast = useToast();
   const dispatch = useDispatch();
   const getCartData = useSelector((state) => state.pizza.cartData);
-  const getOrderData = useSelector((state) => state.pizza.orderPlace);
   const price = getCartData.reduce((acc, pizza) => {
     const itemTotalPrice = pizza.price * pizza.quantity;
     return acc + itemTotalPrice;

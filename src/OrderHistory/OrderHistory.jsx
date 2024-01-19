@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "@chakra-ui/react";
+import { Text, Tfoot } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { useSelector } from "react-redux";
 import { Link as ReactRouterLink } from "react-router-dom";
@@ -15,7 +15,6 @@ import {
   Box,
   TableContainer,
   Table,
-  TableCaption,
   Thead,
   Tbody,
   Tr,
@@ -70,7 +69,7 @@ export default function OrderHistory() {
                       <Thead>
                         <Tr>
                           <Th minW="250px">Nama Makanan</Th>
-                          <Th maxW="100px">Jumlah Pesanan</Th>
+                          <Th maxW="">Jumlah Pesanan</Th>
                           <Th>Notes</Th>
                           <Th isNumeric>Price</Th>
                         </Tr>
@@ -87,6 +86,26 @@ export default function OrderHistory() {
                               }`}</Td>
                             </Tr>
                           ))}
+                        <Tr>
+                          <Th></Th>
+                          <Th></Th>
+                          <Th>PPN</Th>
+                          <Td textAlign="right">{data.ppn}</Td>
+                        </Tr>
+                        <Tr>
+                          <Th></Th>
+                          <Th></Th>
+                          <Th>Service</Th>
+                          <Td textAlign="right">{data.service}</Td>
+                        </Tr>
+                        <Tr>
+                          <Th></Th>
+                          <Th></Th>
+                          <Th>Total Price</Th>
+                          <Th textAlign="right" fontSize={18}>
+                            {data.totalPrice}
+                          </Th>
+                        </Tr>
                       </Tbody>
                     </Table>
                   </TableContainer>
