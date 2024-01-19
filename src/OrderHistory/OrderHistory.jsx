@@ -3,6 +3,7 @@ import { Text, Tfoot } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { useSelector } from "react-redux";
 import { Link as ReactRouterLink } from "react-router-dom";
+import IMAGE from "../assets/NoResults.png";
 
 import {
   Accordion,
@@ -29,6 +30,8 @@ export default function OrderHistory() {
     .slice()
     .sort((a, b) => b.orderId - a.orderId);
 
+    const imageSource = IMAGE;
+
   return (
     <>
       <VStack spacing={4} align="center">
@@ -44,7 +47,7 @@ export default function OrderHistory() {
 
         {getOrderData.length <= 0 ? (
           <VStack h="full" justifyContent={"center"} height="100%">
-            <img src="src/assets/NoResults.png" style={{ height: 200 }}></img>
+            <img src={imageSource} style={{ height: 200 }}></img>
 
             <Text color="gray.400" width="325px">
               Tidak ada history tersedia, yuk belanja dulu

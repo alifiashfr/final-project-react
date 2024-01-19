@@ -9,9 +9,11 @@ import {
   StackDivider,
 } from "@chakra-ui/react";
 import CartItem from "./CartItem";
+import IMAGE from "../assets/bag.png";
 
 export default function Cart() {
   const getCartData = useSelector((state) => state.pizza.cartData);
+  const imageSource = IMAGE;
   return (
     <Card ml={4} width="100%" minWidth="16rem" minHeight="10rem">
       <center>
@@ -22,7 +24,7 @@ export default function Cart() {
           {getCartData.length <= 0 ? (
             <div>
               <img
-                src="src/assets/bag.png"
+                src={imageSource}
                 style={{ height: 180, marginBottom: "24px" }}
               ></img>
 
