@@ -22,10 +22,7 @@ export default function Cart() {
           <Heading size="100%">Cart</Heading>
           {getCartData.length <= 0 ? (
             <div>
-              <img
-                src="src/assets/NoItemsCart.png"
-                style={{ height: 200 }}
-              ></img>
+              <img src="src/assets/bag.png" style={{ height: 200 }}></img>
 
               <p>
                 Keranjang kamu masih kosong, yuk pilih pizzamu terlebih dahulu

@@ -14,12 +14,13 @@ import {
   Td,
   TableCaption,
   TableContainer,
-  VStack
+  VStack,
 } from "@chakra-ui/react";
 
 export default function Bill() {
   const dispatch = useDispatch();
   const getCartData = useSelector((state) => state.pizza.cartData);
+  const getOrderData = useSelector((state) => state.pizza.orderPlace);
   const price = getCartData.reduce((acc, pizza) => {
     const itemTotalPrice = pizza.price * pizza.quantity;
     return acc + itemTotalPrice;
@@ -58,9 +59,23 @@ export default function Bill() {
           </Td>
         </Tr>
       </Table>
-      <Button colorScheme="green" width="100%" mt={4} 
-        onClick={() => dispatch(storeOrderPlace())}>
+      <Button
+        colorScheme="green"
+        width="100%"
+        mt={4}
+        onClick={() =>
+          dispatch(
+            storeOrderPlace({
+              cartData: [...getCartData],
+              ppn: ppn,
+              service: service,
+              totalPrice: totalPrice,
+            })
+          )
+        }
+      >
         Place order
+        {console.log(getOrderData)}
       </Button>
     </VStack>
   ) : (

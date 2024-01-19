@@ -81,8 +81,8 @@ export default function Menu() {
         .filter((data) =>
           data.pizzaName.toLowerCase().includes(getSearchKeyword.toLowerCase())
         )
-        .map((pizza) => (
-          <Box>
+        .map((pizza, index) => (
+          <Box key={index}>
             <Card cardContent={pizza}></Card>
           </Box>
         ))}
