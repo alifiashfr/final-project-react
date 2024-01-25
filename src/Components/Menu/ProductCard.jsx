@@ -16,8 +16,8 @@ import {
   Flex,
   VStack,
 } from "@chakra-ui/react";
-import { storeCartData } from "../Redux/ReduxSlices";
-import { rupiah } from "../utils/currencyConvert";
+import { storeCartData } from "../../Redux/ReduxSlices";
+import { rupiah } from "../../utils/currencyConvert";
 
 export default function ProductCard({ cardContent }) {
   const dispatch = useDispatch();
@@ -64,7 +64,7 @@ export default function ProductCard({ cardContent }) {
       </CardBody>
       <CardFooter width="100%">
         <VStack width="100%">
-        <Text color="red.600" fontSize="2xl" fontWeight="bold" mb={5}>
+          <Text color="red.600" fontSize="2xl" fontWeight="bold" mb={5}>
             {rupiah(cardContent.pizzaPrice)}
           </Text>
           <Button

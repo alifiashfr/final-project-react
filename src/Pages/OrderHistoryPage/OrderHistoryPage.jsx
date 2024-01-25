@@ -3,7 +3,7 @@ import { Text, Tfoot } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { useSelector } from "react-redux";
 import { Link as ReactRouterLink } from "react-router-dom";
-import IMAGE from "../assets/NoResults.png";
+import IMAGE from "../../assets/NoResults.png";
 
 import {
   Accordion,
@@ -22,6 +22,7 @@ import {
   Th,
   Td,
 } from "@chakra-ui/react";
+import { rupiah } from "../../utils/currencyConvert";
 
 export default function OrderHistory() {
   const getOrderData = useSelector((state) => state.pizza.orderPlace);
@@ -30,7 +31,7 @@ export default function OrderHistory() {
     .slice()
     .sort((a, b) => b.orderId - a.orderId);
 
-    const imageSource = IMAGE;
+  const imageSource = IMAGE;
 
   return (
     <>
@@ -84,29 +85,29 @@ export default function OrderHistory() {
                               <Td>{item.pizzaName}</Td>
                               <Td>{item.quantity}</Td>
                               <Td>{item.notes}</Td>
-                              <Td isNumeric>{`${
+                              <Td isNumeric>{`${rupiah(
                                 item.price * item.quantity
-                              }`}</Td>
+                              )}`}</Td>
                             </Tr>
                           ))}
                         <Tr>
                           <Th></Th>
                           <Th></Th>
-                          <Th>PPN</Th>
-                          <Td textAlign="right">{data.ppn}</Td>
+                          <Th>PPN 10%</Th>
+                          <Td textAlign="right">{rupiah(data.ppn)}</Td>
                         </Tr>
                         <Tr>
                           <Th></Th>
                           <Th></Th>
-                          <Th>Service</Th>
-                          <Td textAlign="right">{data.service}</Td>
+                          <Th>Service 5%</Th>
+                          <Td textAlign="right">{rupiah(data.service)}</Td>
                         </Tr>
                         <Tr>
                           <Th></Th>
                           <Th></Th>
                           <Th>Total Price</Th>
                           <Th textAlign="right" fontSize={18}>
-                            {data.totalPrice}
+                            {rupiah(data.totalPrice)}
                           </Th>
                         </Tr>
                       </Tbody>

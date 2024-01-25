@@ -2,9 +2,9 @@ import { Flex, HStack, Image, Input, Button } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { storeSearchKeyword } from "../Redux/ReduxSlices";
+import { storeSearchKeyword } from "../../Redux/ReduxSlices";
 import { Link } from "@chakra-ui/react";
-import IMAGE from "../assets/RichieLogo.png";
+import IMAGE from "../../assets/RichieLogo.png";
 
 export default function NavBar() {
   const getSearchKeyword = useSelector((state) => state.pizza.searchKeyword);
@@ -18,9 +18,7 @@ export default function NavBar() {
           placeholder="Search for pizzas!"
           width={"50%"}
           onChange={(e) => dispatch(storeSearchKeyword(e.target.value))}
-        >
-          {console.log(getSearchKeyword)}
-        </Input>
+        ></Input>
 
         <HStack>
           <Button colorScheme="orange">

@@ -33,7 +33,6 @@ export const pizzaSlice = createSlice({
         ...state.orderPlace,
         { ...action.payload, orderId: state.orderPlace.length + 1 },
       ];
-      console.log(state.orderPlace);
       state.cartData = [];
     },
   },

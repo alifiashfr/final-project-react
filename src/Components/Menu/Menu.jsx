@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 export default function Menu() {
   const getSearchKeyword = useSelector((state) => state.pizza.searchKeyword);
-  
+
   const pizzaData = [
     {
       img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-ph.pizzahut.co.id/uploads/temp/sku-smoked-beef-topshot-final-1-1703057377215.png",
@@ -15,7 +15,7 @@ export default function Menu() {
         "Burger Sapi, Potongan Tomat, Keju Mozzarella, Saus Chili Tomato dan Ekstra Saus Spicy Mayo",
     },
     {
-      img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-dev-temp.pizzahut.co.id/uploads/temp/chicken-lovers-1687316598030.png",
+      img: "https://static-cdn-ph.pizzahut.co.id/uploads/temp/cheeseburger224x2241679631422865-1691483711076.png",
       pizzaName: "Deluxe Smoked Beef",
       pizzaPrice: 80000,
       pizzaDescription:
@@ -29,14 +29,14 @@ export default function Menu() {
         "Daging Ayam Asap, Jagung, Keju Mozzarella, Saus Honey Mustard dan Ekstra Saus Mayonnaise",
     },
     {
-      img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-dev-temp.pizzahut.co.id/uploads/temp/super-supreme-1687316488517.png",
+      img: "https://static-cdn-ph.pizzahut.co.id/uploads/temp/phmeatmonsta1679629733240-1691483986857.png",
       pizzaName: "Super Supreme",
       pizzaPrice: 56000,
       pizzaDescription:
         "Daging Ayam Asap, Daging Asap & Burger Sapi, Jamur, Onion, Nanas, Paprika, Keju Mozzarella",
     },
     {
-      img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-dev-temp.pizzahut.co.id/uploads/temp/american-favourite-1687316388794.png",
+      img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-ph.pizzahut.co.id/uploads/temp/sku-spicy-beef-topshot-final-1-1703057248329.png",
       pizzaName: "American Favourite",
       pizzaPrice: 250000,
       pizzaDescription:
@@ -50,27 +50,27 @@ export default function Menu() {
         "American Favourite Pizza dengan 2 Topping : Meat Lovers dan American Favourite",
     },
     {
-      img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-dev-temp.pizzahut.co.id/uploads/temp/cheese-overload-224x224-1689317783619.png",
+      img: "https://static-cdn-ph.pizzahut.co.id/uploads/temp/cheeseburger224x2241679631422865-1691483711076.png",
       pizzaName: "Cheese Overload",
       pizzaPrice: 100000,
       pizzaDescription:
         "Keju Mozzarella, String Cheese, Cream Mayo, Keju Parmesan, White Cheese",
     },
     {
-      img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-dev-temp.pizzahut.co.id/uploads/temp/veggie-garden-1687316778696.png",
+      img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-ph.pizzahut.co.id/uploads/temp/sku-smoked-beef-topshot-final-1-1703057377215.png",
       pizzaName: "Veggie Garden",
       pizzaPrice: 325000,
       pizzaDescription:
         "Jamur, paprika merah & hijau, nanas, jagung dan keju mozzarella",
     },
     {
-      img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-dev-temp.pizzahut.co.id/uploads/temp/tuna-melt-1687316973619.png",
+      img: "https://static-cdn-ph.pizzahut.co.id/uploads/temp/cheeseburger224x2241679631422865-1691483711076.png",
       pizzaName: "Tuna Melt",
       pizzaPrice: 40000,
       pizzaDescription: "Tuna, Jagung, Keju Mozzarella",
     },
     {
-      img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-dev-temp.pizzahut.co.id/uploads/temp/pepperoni-1687316848318.png",
+      img: "https://static-cdn-ph.pizzahut.co.id/cdn-cgi/image/quality=100,format=auto,width=213/https://static-cdn-ph.pizzahut.co.id/uploads/temp/sku-spicy-beef-topshot-final-1-1703057248329.png",
       pizzaName: "Pepperoni",
       pizzaPrice: 75000,
       pizzaDescription: "Pepperoni, keju mozzarella, saus pizza spesial",
