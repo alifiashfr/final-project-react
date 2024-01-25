@@ -42,12 +42,12 @@ export default function Bill() {
           <Td>{rupiah(price)}</Td>
         </Tr>
         <Tr>
-          <Td>PPN</Td>
+          <Td>PPN 10%</Td>
           <Td>:</Td>
           <Td>{rupiah((price * 10) / 100)}</Td>
         </Tr>
         <Tr>
-          <Td>Service Charge</Td>
+          <Td>Service Charge 5%</Td>
           <Td>:</Td>
           <Td>{rupiah((price * 5) / 100)}</Td>
         </Tr>
@@ -75,9 +75,9 @@ export default function Bill() {
         <AlertDialogOverlay />
 
         <AlertDialogContent>
-          <AlertDialogHeader>Please confirm your purchase</AlertDialogHeader>
+          <AlertDialogHeader>You Have an Order!</AlertDialogHeader>
           <AlertDialogCloseButton />
-          <AlertDialogBody>Are you sure to order?</AlertDialogBody>
+          <AlertDialogBody>Please confirm this purchase</AlertDialogBody>
           <AlertDialogFooter>
             <Button ref={cancelRef} onClick={onClose} colorScheme="red">
               No
