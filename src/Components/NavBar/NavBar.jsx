@@ -32,11 +32,10 @@ export default function NavBar() {
             marginRight={"10px"}
           />
           <Image
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Nz4D-zzClf4w18aEET9wAGiNKuq6UNFpjZUmX0Kp-5JRT-HqHOGVkUBWwfbumKHK_z4&usqp=CAU"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRooM22Fi4LqecV8flMPPpVIqHaGpGOfMTIQ&usqp=CAU"
             height={"40px"}
             marginRight={"10px"}
           />
-          <p>Richie Martin</p>
         </HStack>
       </HStack>
     </>
